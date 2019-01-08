@@ -1,0 +1,50 @@
+MDF Database:  version 1.0
+MDF_INFO | a_4bitupWAsC | XC9572-7-PC44
+MACROCELL | 2 | 8 | tmp<0>
+ATTRIBUTES | 4653874 | 0
+OUTPUTMC | 3 | 2 | 7 | 2 | 4 | 2 | 1
+INPUTS | 2 | C  | CLR
+INPUTP | 2 | 11 | 12
+EQ | 3 | 
+   Q<0>.T = Vcc;
+   Q<0>.CLK = C;
+   Q<0>.AR = CLR;
+
+MACROCELL | 2 | 7 | tmp<1>
+ATTRIBUTES | 4653874 | 0
+OUTPUTMC | 2 | 2 | 4 | 2 | 1
+INPUTS | 3 | C  | CLR  | tmp<0>.LFBK
+INPUTMC | 1 | 2 | 8
+INPUTP | 2 | 11 | 12
+EQ | 3 | 
+   Q<1>.T = tmp<0>.LFBK;
+   Q<1>.CLK = C;
+   Q<1>.AR = CLR;
+
+MACROCELL | 2 | 4 | tmp<2>
+ATTRIBUTES | 4653874 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 4 | tmp<1>.LFBK  | C  | CLR  | tmp<0>.LFBK
+INPUTMC | 2 | 2 | 7 | 2 | 8
+INPUTP | 2 | 11 | 12
+EQ | 3 | 
+   Q<2>.T = tmp<0>.LFBK & tmp<1>.LFBK;
+   Q<2>.CLK = C;
+   Q<2>.AR = CLR;
+
+MACROCELL | 2 | 1 | tmp<3>
+ATTRIBUTES | 4588338 | 0
+INPUTS | 5 | tmp<1>.LFBK  | tmp<2>.LFBK  | C  | CLR  | tmp<0>.LFBK
+INPUTMC | 3 | 2 | 7 | 2 | 4 | 2 | 8
+INPUTP | 2 | 11 | 12
+EQ | 3 | 
+   Q<3>.T = tmp<0>.LFBK & tmp<1>.LFBK & tmp<2>.LFBK;
+   Q<3>.CLK = C;
+   Q<3>.AR = CLR;
+
+PIN | C | 64 | 0 | N/A | 11 | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+PIN | CLR | 64 | 0 | N/A | 12 | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+PIN | Q<0> | 536871040 | 0 | N/A | 38
+PIN | Q<1> | 536871040 | 0 | N/A | 33
+PIN | Q<2> | 536871040 | 0 | N/A | 31
+PIN | Q<3> | 536871040 | 0 | N/A | 29

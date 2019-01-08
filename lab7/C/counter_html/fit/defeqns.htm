@@ -1,0 +1,46 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_Q0: FDCPE port map (Q(0),Q_D(0),C,Q_CLR(0),Q_PRE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_D(0) <= ((ALOAD AND D(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ALOAD AND NOT tmp(0).LFBK));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_CLR(0) <= (ALOAD AND NOT D(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_PRE(0) <= (ALOAD AND D(0));
+</td></tr><tr><td>
+FDCPE_Q1: FDCPE port map (Q(1),Q_D(1),C,Q_CLR(1),Q_PRE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_D(1) <= ((ALOAD AND D(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ALOAD AND tmp(1).LFBK AND NOT Q(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ALOAD AND NOT tmp(1).LFBK AND Q(0).PIN));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_CLR(1) <= (ALOAD AND NOT D(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_PRE(1) <= (ALOAD AND D(1));
+</td></tr><tr><td>
+FTCPE_Q2: FTCPE port map (Q(2),Q_T(2),C,Q_CLR(2),Q_PRE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_T(2) <= ((ALOAD AND D(2) AND NOT tmp(2).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ALOAD AND NOT D(2) AND tmp(2).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ALOAD AND Q(0).PIN AND Q(1).PIN));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_CLR(2) <= (ALOAD AND NOT D(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_PRE(2) <= (ALOAD AND D(2));
+</td></tr><tr><td>
+FTCPE_Q3: FTCPE port map (Q(3),Q_T(3),C,Q_CLR(3),Q_PRE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_T(3) <= ((ALOAD AND D(3) AND NOT tmp(3).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ALOAD AND NOT D(3) AND tmp(3).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ALOAD AND Q(0).PIN AND Q(1).PIN AND Q(2).PIN));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_CLR(3) <= (ALOAD AND NOT D(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q_PRE(3) <= (ALOAD AND D(3));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

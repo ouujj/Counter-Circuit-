@@ -1,0 +1,78 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : cp4b.vf
+// /___/   /\     Timestamp : 05/24/2018 20:21:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family xc9500 -verilog E:/lab7/compair1bit/cp4b.vf -w E:/lab7/compair1bit/cp4b.sch
+//Design Name: cp4b
+//Device: xc9500
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module cp4b(A0, 
+            A1, 
+            A2, 
+            A3, 
+            B0, 
+            B1, 
+            B2, 
+            B3, 
+            X, 
+            Y);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output X;
+   output Y;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_18;
+   
+   cp1b  XLXI_1 (.A(A3), 
+                .B(B3), 
+                .Xi(XLXN_18), 
+                .Yi(XLXN_18), 
+                .Xo(XLXN_2), 
+                .Yo(XLXN_1));
+   cp1b  XLXI_2 (.A(A2), 
+                .B(B2), 
+                .Xi(XLXN_2), 
+                .Yi(XLXN_1), 
+                .Xo(XLXN_4), 
+                .Yo(XLXN_3));
+   cp1b  XLXI_3 (.A(A1), 
+                .B(B1), 
+                .Xi(XLXN_4), 
+                .Yi(XLXN_3), 
+                .Xo(XLXN_6), 
+                .Yo(XLXN_5));
+   cp1b  XLXI_4 (.A(A0), 
+                .B(B0), 
+                .Xi(XLXN_6), 
+                .Yi(XLXN_5), 
+                .Xo(X), 
+                .Yo(Y));
+   GND  XLXI_5 (.G(XLXN_18));
+endmodule

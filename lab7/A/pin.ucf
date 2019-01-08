@@ -1,0 +1,7 @@
+NET "C" LOC = P1 ;
+NET "CLR" LOC = P2 ;
+
+NET "Q<3>" LOC = P11 ;
+NET "Q<2>" LOC = P12 ;
+NET "Q<1>" LOC = P13 ;
+NET "Q<0>" LOC = P14 ;

@@ -1,0 +1,47 @@
+MDF Database:  version 1.0
+MDF_INFO | counter | XC9572-7-PC44
+MACROCELL | 0 | 1 | tmp<0>
+ATTRIBUTES | 4629250 | 0
+INPUTS | 0
+EQ | 3 | 
+   Q<0>.T = Vcc;
+   Q<0>.CLK = C;	// GCK
+   Q<0>.AR = CLR;	// GSR
+GLOBALS | 2 | 2 | C | 4 | CLR
+
+MACROCELL | 3 | 1 | tmp<1>
+ATTRIBUTES | 4629250 | 0
+INPUTS | 1 | Q<0>.PIN
+INPUTP | 1 | 11
+EQ | 3 | 
+   Q<1>.T = Q<0>.PIN;
+   Q<1>.CLK = C;	// GCK
+   Q<1>.AR = CLR;	// GSR
+GLOBALS | 2 | 2 | C | 4 | CLR
+
+MACROCELL | 2 | 1 | tmp<2>
+ATTRIBUTES | 4629250 | 0
+INPUTS | 2 | Q<1>.PIN  | Q<0>.PIN
+INPUTP | 2 | 58 | 11
+EQ | 3 | 
+   Q<2>.T = Q<0>.PIN & Q<1>.PIN;
+   Q<2>.CLK = C;	// GCK
+   Q<2>.AR = CLR;	// GSR
+GLOBALS | 2 | 2 | C | 4 | CLR
+
+MACROCELL | 1 | 1 | tmp<3>
+ATTRIBUTES | 4629250 | 0
+INPUTS | 3 | Q<1>.PIN  | Q<2>.PIN  | Q<0>.PIN
+INPUTP | 3 | 58 | 29 | 11
+EQ | 3 | 
+   Q<3>.T = Q<0>.PIN & Q<1>.PIN & Q<2>.PIN;
+   Q<3>.CLK = C;	// GCK
+   Q<3>.AR = CLR;	// GSR
+GLOBALS | 2 | 2 | C | 4 | CLR
+
+PIN | C | 4096 | 0 | N/A | 20 | 4 | 0 | 1 | 3 | 1 | 2 | 1 | 1 | 1
+PIN | CLR | 65536 | 0 | N/A | 91 | 4 | 0 | 1 | 3 | 1 | 2 | 1 | 1 | 1
+PIN | Q<3> | 536871040 | 0 | N/A | 86
+PIN | Q<0> | 536870976 | 0 | N/A | 11 | 3 | 3 | 1 | 1 | 1 | 2 | 1
+PIN | Q<1> | 536870976 | 0 | N/A | 58 | 2 | 2 | 1 | 1 | 1
+PIN | Q<2> | 536870976 | 0 | N/A | 29 | 1 | 1 | 1

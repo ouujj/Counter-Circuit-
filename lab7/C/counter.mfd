@@ -1,0 +1,71 @@
+MDF Database:  version 1.0
+MDF_INFO | counter | XC9572-7-PC44
+MACROCELL | 0 | 1 | tmp<0>
+ATTRIBUTES | 8881042 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 3 | ALOAD  | D<0>  | tmp<0>.LFBK
+INPUTMC | 1 | 0 | 1
+INPUTP | 2 | 89 | 87
+EQ | 5 | 
+   Q<0>.D = ALOAD & D<0>
+	# !ALOAD & !tmp<0>.LFBK;
+   Q<0>.CLK = C;	// GCK
+   Q<0>.AP = ALOAD & D<0>;
+   Q<0>.AR = ALOAD & !D<0>;
+GLOBALS | 1 | 2 | C
+
+MACROCELL | 3 | 1 | tmp<1>
+ATTRIBUTES | 8881042 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 4 | ALOAD  | D<1>  | Q<0>.PIN  | tmp<1>.LFBK
+INPUTMC | 1 | 3 | 1
+INPUTP | 3 | 89 | 15 | 11
+EQ | 6 | 
+   Q<1>.D = ALOAD & D<1>
+	# !ALOAD & tmp<1>.LFBK & !Q<0>.PIN
+	# !ALOAD & !tmp<1>.LFBK & Q<0>.PIN;
+   Q<1>.CLK = C;	// GCK
+   Q<1>.AP = ALOAD & D<1>;
+   Q<1>.AR = ALOAD & !D<1>;
+GLOBALS | 1 | 2 | C
+
+MACROCELL | 2 | 1 | tmp<2>
+ATTRIBUTES | 4686738 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 5 | Q<1>.PIN  | ALOAD  | Q<0>.PIN  | D<2>  | tmp<2>.LFBK
+INPUTMC | 1 | 2 | 1
+INPUTP | 4 | 58 | 89 | 11 | 67
+EQ | 6 | 
+   Q<2>.T = ALOAD & D<2> & !tmp<2>.LFBK
+	# ALOAD & !D<2> & tmp<2>.LFBK
+	# !ALOAD & Q<0>.PIN & Q<1>.PIN;
+   Q<2>.CLK = C;	// GCK
+   Q<2>.AP = ALOAD & D<2>;
+   Q<2>.AR = ALOAD & !D<2>;
+GLOBALS | 1 | 2 | C
+
+MACROCELL | 1 | 1 | tmp<3>
+ATTRIBUTES | 4686738 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 6 | Q<1>.PIN  | Q<2>.PIN  | ALOAD  | Q<0>.PIN  | D<3>  | tmp<3>.LFBK
+INPUTMC | 1 | 1 | 1
+INPUTP | 5 | 58 | 29 | 89 | 11 | 9
+EQ | 6 | 
+   Q<3>.T = ALOAD & D<3> & !tmp<3>.LFBK
+	# ALOAD & !D<3> & tmp<3>.LFBK
+	# !ALOAD & Q<0>.PIN & Q<1>.PIN & Q<2>.PIN;
+   Q<3>.CLK = C;	// GCK
+   Q<3>.AP = ALOAD & D<3>;
+   Q<3>.AR = ALOAD & !D<3>;
+GLOBALS | 1 | 2 | C
+
+PIN | C | 4096 | 0 | N/A | 20 | 4 | 0 | 1 | 3 | 1 | 2 | 1 | 1 | 1
+PIN | ALOAD | 64 | 0 | N/A | 89 | 4 | 0 | 1 | 3 | 1 | 2 | 1 | 1 | 1
+PIN | D<0> | 64 | 0 | N/A | 87 | 1 | 0 | 1
+PIN | D<1> | 64 | 0 | N/A | 15 | 1 | 3 | 1
+PIN | D<2> | 64 | 0 | N/A | 67 | 1 | 2 | 1
+PIN | D<3> | 64 | 0 | N/A | 9 | 1 | 1 | 1
+PIN | Q<3> | 536871040 | 0 | N/A | 86
+PIN | Q<0> | 536870976 | 0 | N/A | 11 | 3 | 1 | 1 | 2 | 1 | 3 | 1
+PIN | Q<1> | 536870976 | 0 | N/A | 58 | 2 | 1 | 1 | 2 | 1
+PIN | Q<2> | 536870976 | 0 | N/A | 29 | 1 | 1 | 1

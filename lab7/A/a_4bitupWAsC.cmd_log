@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "E:/lab7/A/a_4bitupWAsC.xst" -ofn "E:/lab7/A/a_4bitupWAsC.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pin.ucf -p xc9572-PC44-7 a_4bitupWAsC.ngc a_4bitupWAsC.ngd  
+cpldfit -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk a_4bitupWAsC.ngd 
+XSLTProcess a_4bitupWAsC_build.xml 
+tsim -intstyle ise a_4bitupWAsC a_4bitupWAsC.nga 
+taengine -intstyle ise -f a_4bitupWAsC -w --format html1 -l a_4bitupWAsC_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n a_4bitupWAsC -i a_4bitupWAsC 

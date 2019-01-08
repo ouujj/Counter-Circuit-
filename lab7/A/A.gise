@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="A.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="a_4bitupWAsC.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="a_4bitupWAsC.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="a_4bitupWAsC.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="a_4bitupWAsC.jed"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="a_4bitupWAsC.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="a_4bitupWAsC.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="a_4bitupWAsC.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="a_4bitupWAsC.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="a_4bitupWAsC.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="a_4bitupWAsC.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="a_4bitupWAsC.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="a_4bitupWAsC.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="a_4bitupWAsC.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="a_4bitupWAsC.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="a_4bitupWAsC.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="a_4bitupWAsC.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="a_4bitupWAsC.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="a_4bitupWAsC.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="a_4bitupWAsC.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="a_4bitupWAsC.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="a_4bitupWAsC.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="a_4bitupWAsC_build.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="a_4bitupWAsC_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="a_4bitupWAsC_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="a_4bitupWAsC_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="a_4bitupWAsC_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="a_4bitupWAsC_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1526723035" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1526723035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723035" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8921864986328132261" xil_pn:start_ts="1526723035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723040" xil_pn:in_ck="3017433082611993642" xil_pn:name="TRANEXT_xstsynthesize_CPLD" xil_pn:prop_ck="-7775468577752787360" xil_pn:start_ts="1526723035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="a_4bitupWAsC.lso"/>
+      <outfile xil_pn:name="a_4bitupWAsC.ngc"/>
+      <outfile xil_pn:name="a_4bitupWAsC.ngr"/>
+      <outfile xil_pn:name="a_4bitupWAsC.prj"/>
+      <outfile xil_pn:name="a_4bitupWAsC.stx"/>
+      <outfile xil_pn:name="a_4bitupWAsC.syr"/>
+      <outfile xil_pn:name="a_4bitupWAsC.xst"/>
+      <outfile xil_pn:name="a_4bitupWAsC_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723040" xil_pn:in_ck="148885863987" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8059626594441681208" xil_pn:start_ts="1526723040">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723045" xil_pn:in_ck="8322615116701833983" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="5271358926975141487" xil_pn:start_ts="1526723040">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="a_4bitupWAsC.bld"/>
+      <outfile xil_pn:name="a_4bitupWAsC.ngd"/>
+      <outfile xil_pn:name="a_4bitupWAsC_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723056" xil_pn:in_ck="2464181844160883277" xil_pn:name="TRANEXT_vm6File_xc9500" xil_pn:prop_ck="1615394651500173228" xil_pn:start_ts="1526723045">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="a_4bitupWAsC.gyd"/>
+      <outfile xil_pn:name="a_4bitupWAsC.mfd"/>
+      <outfile xil_pn:name="a_4bitupWAsC.nga"/>
+      <outfile xil_pn:name="a_4bitupWAsC.pad"/>
+      <outfile xil_pn:name="a_4bitupWAsC.pnx"/>
+      <outfile xil_pn:name="a_4bitupWAsC.rpt"/>
+      <outfile xil_pn:name="a_4bitupWAsC.tim"/>
+      <outfile xil_pn:name="a_4bitupWAsC.tspec"/>
+      <outfile xil_pn:name="a_4bitupWAsC.vm6"/>
+      <outfile xil_pn:name="a_4bitupWAsC.xml"/>
+      <outfile xil_pn:name="a_4bitupWAsC_build.xml"/>
+      <outfile xil_pn:name="a_4bitupWAsC_html"/>
+      <outfile xil_pn:name="a_4bitupWAsC_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723058" xil_pn:in_ck="2464181844160892141" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-9204593535224376705" xil_pn:start_ts="1526723056">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="a_4bitupWAsC.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1526723056" xil_pn:in_ck="2464181844160892141" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1526723054">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

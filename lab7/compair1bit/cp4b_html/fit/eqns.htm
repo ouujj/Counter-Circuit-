@@ -1,0 +1,143 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "cp4b";
+      var device = "XC9572";
+      signals = new Array("X","Y");
+      sigNegs = new Array("OFF","OFF");
+      sigTypes = new Array("","");
+
+      
+            pterms["FB3_1_1"]=new Array("A3","A2","A1","/B1");
+          
+            pterms["FB3_1_2"]=new Array("/B3","A2","A1","/B1");
+          
+            pterms["FB3_1_3"]=new Array("A3","/B2","/B1","A0","/B0");
+          
+            pterms["FB3_1_4"]=new Array("/B3","A2","/B1","A0","/B0");
+          
+            pterms["FB3_1_5"]=new Array("/B3","/B2","/B1","A0","/B0");
+          
+            pterms["FB3_2_1"]=new Array("A3","/B3");
+          
+            pterms["FB3_2_2"]=new Array("A3","A2","/B2");
+          
+            pterms["FB3_2_3"]=new Array("/B3","A2","/B2");
+          
+            pterms["FB3_2_4"]=new Array("A3","/B2","A1","/B1");
+          
+            pterms["FB3_2_5"]=new Array("/B3","/B2","A1","/B1");
+          
+            pterms["FB3_3_1"]=new Array("A3","A2","A1","A0","/B0");
+          
+            pterms["FB3_3_2"]=new Array("A3","A2","/B1","A0","/B0");
+          
+            pterms["FB3_3_3"]=new Array("A3","/B2","A1","A0","/B0");
+          
+            pterms["FB3_3_4"]=new Array("/B3","A2","A1","A0","/B0");
+          
+            pterms["FB3_3_5"]=new Array("/B3","/B2","A1","A0","/B0");
+          
+            pterms["FB3_4_1"]=new Array("/A3","/A2","/A1","B1");
+          
+            pterms["FB3_4_2"]=new Array("B3","/A2","/A1","B1");
+          
+            pterms["FB3_4_3"]=new Array("/A3","B2","B1","/A0","B0");
+          
+            pterms["FB3_4_4"]=new Array("B3","/A2","B1","/A0","B0");
+          
+            pterms["FB3_4_5"]=new Array("B3","B2","B1","/A0","B0");
+          
+            pterms["FB3_5_1"]=new Array("/A3","B3");
+          
+            pterms["FB3_5_2"]=new Array("/A3","/A2","B2");
+          
+            pterms["FB3_5_3"]=new Array("B3","/A2","B2");
+          
+            pterms["FB3_5_4"]=new Array("/A3","B2","/A1","B1");
+          
+            pterms["FB3_5_5"]=new Array("B3","B2","/A1","B1");
+          
+            pterms["FB3_6_1"]=new Array("/A3","/A2","/A1","/A0","B0");
+          
+            pterms["FB3_6_2"]=new Array("/A3","/A2","B1","/A0","B0");
+          
+            pterms["FB3_6_3"]=new Array("/A3","B2","/A1","/A0","B0");
+          
+            pterms["FB3_6_4"]=new Array("B3","/A2","/A1","/A0","B0");
+          
+            pterms["FB3_6_5"]=new Array("B3","B2","/A1","/A0","B0");
+          
+          d2["X"]=new Array("FB3_2_1","FB3_2_2","FB3_2_3","FB3_2_4","FB3_2_5","FB3_1_1","FB3_1_2","FB3_1_3","FB3_1_4","FB3_1_5","FB3_3_1","FB3_3_2","FB3_3_3","FB3_3_4","FB3_3_5");
+          
+            d2imp["X"]=new Array("0","0","0","0","0","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["Y"]=new Array("FB3_5_1","FB3_5_2","FB3_5_3","FB3_5_4","FB3_5_5","FB3_4_1","FB3_4_2","FB3_4_3","FB3_4_4","FB3_4_5","FB3_6_1","FB3_6_2","FB3_6_3","FB3_6_4","FB3_6_5");
+          
+            d2imp["Y"]=new Array("0","0","0","0","0","1","1","1","1","1","1","1","1","1","1");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

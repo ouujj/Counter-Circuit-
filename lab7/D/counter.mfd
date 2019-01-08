@@ -1,0 +1,51 @@
+MDF Database:  version 1.0
+MDF_INFO | counter | XC9572-7-PC44
+MACROCELL | 2 | 8 | tmp<0>
+ATTRIBUTES | 8848162 | 0
+OUTPUTMC | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+INPUTS | 3 | SLOAD  | C  | tmp<0>.LFBK
+INPUTMC | 1 | 2 | 8
+INPUTP | 2 | 12 | 11
+EQ | 2 | 
+   Q<0>.D = !SLOAD & !tmp<0>.LFBK;
+   Q<0>.CLK = C;
+
+MACROCELL | 2 | 7 | tmp<1>
+ATTRIBUTES | 8848162 | 0
+OUTPUTMC | 3 | 2 | 7 | 2 | 4 | 2 | 1
+INPUTS | 4 | SLOAD  | tmp<1>.LFBK  | C  | tmp<0>.LFBK
+INPUTMC | 2 | 2 | 7 | 2 | 8
+INPUTP | 2 | 12 | 11
+EQ | 3 | 
+   !Q<1>.D = !SLOAD & tmp<0>.LFBK & tmp<1>.LFBK
+	# !SLOAD & !tmp<0>.LFBK & !tmp<1>.LFBK;
+   Q<1>.CLK = C;
+
+MACROCELL | 2 | 4 | tmp<2>
+ATTRIBUTES | 4653858 | 0
+OUTPUTMC | 2 | 2 | 4 | 2 | 1
+INPUTS | 5 | SLOAD  | tmp<1>.LFBK  | tmp<2>.LFBK  | C  | tmp<0>.LFBK
+INPUTMC | 3 | 2 | 7 | 2 | 4 | 2 | 8
+INPUTP | 2 | 12 | 11
+EQ | 3 | 
+   Q<2>.T = SLOAD & tmp<2>.LFBK
+	# !SLOAD & tmp<0>.LFBK & tmp<1>.LFBK;
+   Q<2>.CLK = C;
+
+MACROCELL | 2 | 1 | tmp<3>
+ATTRIBUTES | 4653858 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 6 | SLOAD  | tmp<0>.LFBK  | tmp<1>.LFBK  | tmp<2>.LFBK  | C  | tmp<3>.LFBK
+INPUTMC | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+INPUTP | 2 | 12 | 11
+EQ | 3 | 
+   Q<3>.T = SLOAD & !tmp<3>.LFBK
+	# !SLOAD & tmp<0>.LFBK & tmp<1>.LFBK & tmp<2>.LFBK;
+   Q<3>.CLK = C;
+
+PIN | C | 64 | 0 | N/A | 11 | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+PIN | SLOAD | 64 | 0 | N/A | 12 | 4 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1
+PIN | Q<0> | 536871040 | 0 | N/A | 38
+PIN | Q<1> | 536871040 | 0 | N/A | 33
+PIN | Q<2> | 536871040 | 0 | N/A | 31
+PIN | Q<3> | 536871040 | 0 | N/A | 29
